@@ -1,5 +1,5 @@
 $Tablet: 826px;
-$Mobile: 375px;
+$Mobile: 390px;
 
 *,
 *::after,
@@ -51,6 +51,10 @@ body {
 
   display: flex;
   justify-content: center;
+
+  &.dark-mode {
+    background-image: $Dark-Gradient;
+  }
 }
 
 .container {

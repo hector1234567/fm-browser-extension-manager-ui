@@ -46,3 +46,21 @@
     }
   }
 }
+
+body.dark-mode .navbar {
+  &__heading {
+    color: $Neutral-0;
+  }
+
+  &__button {
+    background-color: $Neutral-700;
+    border: 0.1rem solid $Neutral-600;
+    color: $Neutral-0;
+    box-shadow: unset;
+
+    &--active {
+      color: $Neutral-900;
+      background-color: $Red-400;
+    }
+  }
+}
