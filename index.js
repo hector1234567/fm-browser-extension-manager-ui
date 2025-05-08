@@ -63,7 +63,9 @@ function filterList() {
   filterButtons
     .querySelectorAll(".navbar__button")
     .forEach((el) => el.classList.remove("active"));
-  filterButtons.querySelector(`[href="${filter}"]`).classList.add("active");
+  const activeButton = filterButtons.querySelector(`[href="${filter}"]`);
+  if (!activeButton) return;
+  activeButton.classList.add("active");
   renderExtensionList();
 }
 
