@@ -12,6 +12,10 @@
   align-items: center;
   box-shadow: $Shadow;
 
+  @media (max-width: $Tablet) {
+    margin-bottom: 4rem;
+  }
+
   &__logo {
     display: flex;
     img {

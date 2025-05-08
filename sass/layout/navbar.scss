@@ -4,6 +4,11 @@
   align-items: center;
   margin-bottom: 3.2rem;
 
+  @media (max-width: $Mobile) {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
   &__heading {
     color: $Neutral-900;
     font-size: 3.4rem;
