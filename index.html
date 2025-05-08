@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Hector BG | Browser extensions manager UI</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <figure class="logo">
+          <img src="assets/images/logo.svg" alt="Extensions" />
+        </figure>
+        <button class="header__dark-mode-btn">
+          <img src="assets/images/icon-moon.svg" alt="Dark mode" />
+        </button>
+      </header>
+      <main class="main">
+        <nav class="navbar">
+          <h1 class="navbar__heading">Extensions List</h1>
+          <div class="navbar__buttons">
+            <button class="navbar__button button button--active">All</button>
+            <button class="navbar__button button">Active</button>
+            <button class="navbar__button button">Inactive</button>
+          </div>
+        </nav>
+        <section class="extension-list">
+          <article class="extension">
+            <div class="extension__content">
+              <figure class="extension__icon">
+                <img src="assets/images/logo-devlens.svg" alt="Devlens" />
+              </figure>
+              <div class="extension__text">
+                <h2>DevLens</h2>
+                <p>
+                  Quickly inspect page layouts and visualize element boundaries.
+                </p>
+              </div>
+            </div>
+            <div class="extension__buttons">
+              <button class="extension__button button">Remove</button>
+              <div class="extension__switch switch"></div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
