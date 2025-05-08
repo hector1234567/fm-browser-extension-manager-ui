@@ -37,22 +37,34 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 2.2rem 2.2rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $Neutral-300;
+    }
+
+    &:focus {
+      outline: 0.2rem solid $Red-500;
+      outline-offset: 0.2rem;
+    }
   }
 }
 
-body.dark-mode {
-  .header {
-    background-color: $Neutral-800;
-    border: none;
-    box-shadow: none;
+body.dark-mode .header {
+  background-color: $Neutral-800;
+  border: none;
+  box-shadow: none;
 
-    &__logo {
-      background-image: url(/assets/images/logo-darkmode.svg);
-    }
+  &__logo {
+    background-image: url(/assets/images/logo-darkmode.svg);
+  }
 
-    &__dark-mode-btn {
-      background-color: $Neutral-700;
-      background-image: url(/assets/images/icon-sun.svg);
+  &__dark-mode-btn {
+    background-color: $Neutral-700;
+    background-image: url(/assets/images/icon-sun.svg);
+
+    &:hover {
+      background-color: $Neutral-600;
     }
   }
 }

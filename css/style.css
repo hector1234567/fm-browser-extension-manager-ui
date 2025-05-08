@@ -117,6 +117,14 @@ body.dark-mode {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 2.2rem 2.2rem;
+  transition: background-color 0.3s ease;
+}
+.header__dark-mode-btn:hover {
+  background-color: hsl(0, 0%, 78%);
+}
+.header__dark-mode-btn:focus {
+  outline: 0.2rem solid hsl(3, 71%, 56%);
+  outline-offset: 0.2rem;
 }
 
 body.dark-mode .header {
@@ -130,6 +138,9 @@ body.dark-mode .header__logo {
 body.dark-mode .header__dark-mode-btn {
   background-color: hsl(225, 23%, 24%);
   background-image: url(/assets/images/icon-sun.svg);
+}
+body.dark-mode .header__dark-mode-btn:hover {
+  background-color: hsl(226, 11%, 37%);
 }
 
 .navbar {
@@ -172,9 +183,20 @@ body.dark-mode .header__dark-mode-btn {
   box-shadow: 0 0.2rem 0.3rem 0 hsl(213, 55%, 90%);
   height: 4.6rem;
 }
-.navbar__button--active {
+.navbar__button:hover {
+  opacity: 0.7;
+}
+.navbar__button.active {
   color: hsl(200, 60%, 99%);
   background-color: hsl(3, 77%, 44%);
+}
+.navbar__button.active:hover {
+  opacity: 1;
+  background-color: hsl(3, 71%, 56%);
+}
+.navbar__button:focus {
+  outline: 0.2rem solid hsl(3, 71%, 56%);
+  outline-offset: 0.2rem;
 }
 
 body.dark-mode .navbar__heading {
@@ -186,9 +208,16 @@ body.dark-mode .navbar__button {
   color: hsl(200, 60%, 99%);
   box-shadow: unset;
 }
-body.dark-mode .navbar__button--active {
+body.dark-mode .navbar__button:hover {
+  opacity: 1;
+  background-color: hsl(226, 11%, 37%);
+}
+body.dark-mode .navbar__button.active {
   color: hsl(226, 75%, 14%);
   background-color: hsl(3, 86%, 64%);
+}
+body.dark-mode .navbar__button.active:hover {
+  background-color: hsl(3, 71%, 56%);
 }
 
 .extension-list {
@@ -264,6 +293,10 @@ body.dark-mode .navbar__button--active {
   border-radius: 999rem;
   cursor: pointer;
 }
+.extension__button:focus {
+  outline: 0.2rem solid hsl(3, 71%, 56%);
+  outline-offset: 0.2rem;
+}
 .extension__switch {
   height: 2rem;
   width: 3.6rem;
@@ -292,12 +325,16 @@ body.dark-mode .navbar__button--active {
   right: 0;
   box-shadow: inset 0 0 0 0.2rem hsl(3, 77%, 44%);
 }
+.extension__switch:focus {
+  outline: 0.2rem solid hsl(3, 71%, 56%);
+  outline-offset: 0.2rem;
+}
 
 body.dark-mode .extension {
   background-color: hsl(226, 25%, 17%);
   border: 0.1rem solid hsl(226, 11%, 37%);
   box-shadow: unset;
-  color: hsl(200, 60%, 99%);
+  color: hsl(0, 0%, 78%);
 }
 body.dark-mode .extension__text h2 {
   color: hsl(200, 60%, 99%);
