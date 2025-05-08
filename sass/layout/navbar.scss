@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3.2rem;
+
+  &__heading {
+    color: $Neutral-900;
+    font-size: 3.4rem;
+    font-weight: $Bold;
+    letter-spacing: -0.1rem;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  &__button {
+    background-color: $Neutral-0;
+    border: 0.1rem solid $Neutral-200;
+    border-radius: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-decoration: none;
+    color: $Neutral-900;
+    font-size: 2rem;
+    line-height: 140%;
+    letter-spacing: -0.03rem;
+    font-family: inherit;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: $Shadow;
+    height: 4.6rem;
+
+    &--active {
+      color: $Neutral-0;
+      background-color: $Red-700;
+    }
+  }
+}

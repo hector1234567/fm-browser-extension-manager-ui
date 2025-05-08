@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $Font;
+  font-weight: $Regular;
+  color: $Neutral-600;
+  font-size: 1.6rem;
+  background-image: $Light-Gradient;
+  min-height: 100dvh;
+
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 117rem;
+  margin: 4rem;
+}

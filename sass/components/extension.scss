@@ -1,0 +1,91 @@
+.extension {
+  background-color: $Neutral-0;
+  border: 0.1rem solid $Neutral-200;
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: $Shadow;
+  min-height: 20rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__content {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  &__icon {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    h2 {
+      font-size: 2rem;
+      font-weight: $Bold;
+      line-height: 120%;
+      letter-spacing: -0.02rem;
+      color: $Neutral-900;
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.6rem;
+    font-family: inherit;
+    font-weight: $Semibold;
+    line-height: 140%;
+    letter-spacing: -0.05rem;
+    color: $Neutral-900;
+    border: 0.1rem solid $Neutral-300;
+    background-color: inherit;
+    border-radius: 999rem;
+    cursor: pointer;
+  }
+
+  &__switch {
+    height: 2rem;
+    width: 3.6rem;
+    border-radius: 2rem;
+    background-color: $Neutral-300;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      width: 1.9rem;
+      height: 1.9rem;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background-color: $Neutral-0;
+      transform: translateY(-50%);
+      box-shadow: inset 0 0 0 0.2rem $Neutral-300;
+      border-radius: 2rem;
+    }
+
+    &.active {
+      background-color: $Red-700;
+
+      &::before {
+        left: unset;
+        right: 0;
+        box-shadow: inset 0 0 0 0.2rem $Red-700;
+      }
+    }
+  }
+}
