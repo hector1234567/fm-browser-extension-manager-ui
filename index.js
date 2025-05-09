@@ -55,7 +55,13 @@ function handleClickExtensionList(ev) {
 }
 
 function handleChangeDarkMode() {
-  document.body.classList.toggle("dark-mode");
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.removeItem("dark-mode");
+  } else {
+    localStorage.setItem("dark-mode", "true");
+  }
+
+  switchDarkMode();
 }
 
 function filterList() {
@@ -69,8 +75,17 @@ function filterList() {
   renderExtensionList();
 }
 
+function switchDarkMode() {
+  if (localStorage.getItem("dark-mode")) {
+    document.body.classList.add("dark-mode");
+  } else {
+    document.body.classList.remove("dark-mode");
+  }
+}
+
 async function init() {
   try {
+    switchDarkMode();
     const res = await fetch("/data.json");
     extensionList = await res.json();
     filterList();
