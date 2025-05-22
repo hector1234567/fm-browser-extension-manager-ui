@@ -21,6 +21,8 @@
     height: 4.1rem;
     width: 17.9rem;
     background-image: url(/assets/images/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   &__dark-mode-btn {
