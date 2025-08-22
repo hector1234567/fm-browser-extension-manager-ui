@@ -18,7 +18,9 @@ function renderExtensionList() {
         (filter === "#inactive" && !isActive)
       ) {
         return `
-          <article class="extension" data-id="${id}">
+          <article class="extension" data-id="${id}" style="view-transition-name: card-${
+          id + 1
+        };">
             <div class="extension__content">
               <figure class="extension__icon">
                 <img src="${logo}" alt="${name}" />
@@ -39,7 +41,13 @@ function renderExtensionList() {
     })
     .join("");
 
-  divExtensionList.innerHTML = html;
+  if (!document.startViewTransition) {
+    divExtensionList.innerHTML = html;
+  } else {
+    document.startViewTransition(() => {
+      divExtensionList.innerHTML = html;
+    });
+  }
 }
 
 function handleClickExtensionList(ev) {
@@ -88,7 +96,12 @@ async function init() {
     switchDarkMode();
     const res = await fetch("/data.json");
     extensionList = await res.json();
-    filterList();
+
+    if (!document.startViewTransition) {
+      filterList();
+    } else {
+      document.startViewTransition(filterList);
+    }
 
     divExtensionList.addEventListener("click", handleClickExtensionList);
     window.addEventListener("hashchange", filterList);
